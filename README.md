@@ -85,3 +85,4 @@ Edit `rag_app/config.py` to change:
 - `CHUNK_SIZE` / `CHUNK_OVERLAP` — text splitting parameters
 - `TOP_K` — number of retrieved chunks per query
 "# AICDK" 
+"# AICDK" 
