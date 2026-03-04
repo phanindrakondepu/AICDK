@@ -1,0 +1,28 @@
+Retrieval-Augmented Generation (RAG) is an AI framework that combines the strengths
+of pre-trained language models with external knowledge retrieval systems. Instead of
+relying solely on what a model learned during training, RAG dynamically fetches
+relevant documents from a knowledge base at inference time.
+
+The RAG pipeline typically consists of three stages:
+1. Ingestion – Documents are loaded, chunked, embedded, and stored in a vector database.
+2. Retrieval – When a user asks a question, the query is embedded and the most similar
+   document chunks are retrieved using approximate nearest-neighbour search.
+3. Generation – The retrieved context is combined with the original question and fed
+   to a language model to produce a grounded answer.
+
+FAISS (Facebook AI Similarity Search) is a library developed by Meta for efficient
+similarity search and clustering of dense vectors. It supports several index types
+including flat (brute-force), IVF (inverted file), and HNSW (hierarchical navigable
+small world). For small-to-medium workloads, a flat index with L2 or inner-product
+distance is usually sufficient.
+
+Sentence-Transformers is a Python library that provides easy-to-use sentence and
+text embeddings. It wraps Hugging Face transformer models and adds pooling layers
+to produce fixed-size vector representations of text. The mxbai-embed-large-v1 model
+from mixedbread.ai is one of the top-performing open-source embedding models on the
+MTEB leaderboard, matching proprietary models like OpenAI's text-embedding-3-large.
+
+LangChain is a framework for building applications powered by large language models.
+It provides abstractions for document loading, text splitting, vector stores,
+retrievers, prompts, and chains. By combining these components, developers can
+quickly prototype and deploy RAG pipelines.

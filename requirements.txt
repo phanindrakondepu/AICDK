@@ -1,0 +1,21 @@
+# Core
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+langchain-text-splitters>=0.3.0
+
+# Vector store
+faiss-cpu>=1.8.0
+
+# Embedding model
+sentence-transformers>=3.0.0
+
+# LLM
+langchain-ollama>=0.2.0
+
+# Document loaders
+unstructured>=0.15.0
+pypdf>=4.0.0
+
+# UI
+streamlit>=1.38.0
